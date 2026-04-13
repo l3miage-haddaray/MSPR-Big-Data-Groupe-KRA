@@ -21,8 +21,10 @@ warnings.filterwarnings('ignore')
 # CONFIGURATION
 # ============================================================
 
-BASE_PATH   = "/Users/kchaou/Desktop/MSPR DATA"
-OUTPUT_PATH = os.path.join(BASE_PATH, "output")
+
+# Adapter les chemins pour l'environnement local (Windows)
+BASE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Datasets", "Raw")
+OUTPUT_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Datasets", "Output")
 os.makedirs(OUTPUT_PATH, exist_ok=True)
 
 DEP_CODE = "69"
